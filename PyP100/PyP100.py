@@ -353,8 +353,6 @@ class P100():
 		self.login()
 		data = self.getDeviceInfo()
 
-		data = json.loads(data)
-
 		if data["error_code"] != 0:
 			errorCode = ast.literal_eval(decryptedResponse)["error_code"]
 			errorMessage = self.errorCodes[str(errorCode)]
